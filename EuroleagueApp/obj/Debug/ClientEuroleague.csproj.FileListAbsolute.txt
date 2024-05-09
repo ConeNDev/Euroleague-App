@@ -18,3 +18,4 @@ C:\Users\xMx\source\repos\EuroleagueApp\EuroleagueApp\obj\Debug\EuroleagueApp.Us
 C:\Users\xMx\source\repos\EuroleagueApp\EuroleagueApp\obj\Debug\EuroleagueApp.UserControls.UCTeams.UCTeamSearch.resources
 C:\Users\xMx\source\repos\EuroleagueApp\EuroleagueApp\obj\Debug\EuroleagueApp.UserControls.UCPlayers.UCPlayerCreate.resources
 C:\Users\xMx\source\repos\EuroleagueApp\EuroleagueApp\obj\Debug\EuroleagueApp.UserControls.UCTeams.UCTeamEditData.resources
+C:\Users\xMx\source\repos\EuroleagueApp\EuroleagueApp\obj\Debug\EuroleagueApp.UserControls.UCPlayers.UCPlayerSearch.resources

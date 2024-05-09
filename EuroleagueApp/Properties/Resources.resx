@@ -154,16 +154,25 @@
   <data name="sfajpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sfajpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImportedPhoto_17126868652191" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportedPhoto_17126868652191.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FzyNS1WX0AEBdZN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FzyNS1WX0AEBdZN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FzyNS1WX0AEBdZN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FzyNS1WX0AEBdZN1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="maxresdefault4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImportedPhoto_1712686865219" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportedPhoto_1712686865219.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sl_022820_28430_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sl_022820_28430_21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maxresdefault4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maxresdefault2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImportedPhoto_17126868652192" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportedPhoto_17126868652192.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

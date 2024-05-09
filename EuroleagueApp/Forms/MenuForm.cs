@@ -37,7 +37,8 @@ namespace EuroleagueApp.Forms
 				this.Size = new System.Drawing.Size(341, 512);
 				pnlMenu.Size = new System.Drawing.Size(366, 522);
 			}
-			if (control.GetType() == typeof(UCTeamSearch))
+			if (control.GetType() == typeof(UCTeamSearch) ||
+				control.GetType() == typeof(UCPlayerSearch))
 			{
 				this.toolStripMenuItem1.Padding = new Padding(205, 0, 5, 0);
 				this.toolStripMenuItem2.Padding = new Padding(205, 0, 5, 0);
@@ -74,6 +75,16 @@ namespace EuroleagueApp.Forms
 			ChangePanel(changesUIController.
 				MakeTeamEditWindow(selectedTeamFromDgv));
         }
-		
+
+        private void searchPlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			PlayerUIController playerUIController = new PlayerUIController();
+			ChangePanel(playerUIController.MakeSearchPlayerWindow(this));
+        }
+
+        private void editPlayerToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

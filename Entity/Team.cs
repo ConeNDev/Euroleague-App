@@ -28,12 +28,13 @@ namespace Entity
 		[Browsable(false)]
 		public override string[] PrimaryKey => new string[] {"TeamId"};
 		[Browsable(false)]
-		public override string[] ForeignKeys => new string[] { "City" };
+		public override string[] ForeignKeys => new string[] { "CityId" };
 		[Browsable(false)]
 		public override string InsertValues =>$"@Name, @EuroleagueChampionsTitles," +
 			$"@Coach, @Arena, @CityId";
 		[Browsable(false)]
-		public override string UpdateValues => throw new NotImplementedException();
+		public override string UpdateValues => "Name=@Name, EuroleagueChampionsTitles=" +
+			"@EuroleagueChampionsTitles, Coach=@Coach, Arena=@Arena, CityId=@CityId";
 		[Browsable(false)]
 		public override string WhereQueryId => "";
 		[Browsable(false)]

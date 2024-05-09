@@ -76,6 +76,12 @@
     <Compile Include="UserControls\UCPlayers\UCPlayerCreate.Designer.cs">
       <DependentUpon>UCPlayerCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCPlayers\UCPlayerSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPlayers\UCPlayerSearch.Designer.cs">
+      <DependentUpon>UCPlayerSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCTeams\UCTeamCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCPlayers\UCPlayerCreate.resx">
       <DependentUpon>UCPlayerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPlayers\UCPlayerSearch.resx">
+      <DependentUpon>UCPlayerSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCTeams\UCTeamCreate.resx">
       <DependentUpon>UCTeamCreate.cs</DependentUpon>
@@ -141,6 +150,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ImportedPhoto_17126868652192.jpg" />
+    <None Include="Resources\ImportedPhoto_17126868652191.jpg" />
+    <None Include="Resources\ImportedPhoto_1712686865219.jpg" />
     <None Include="Resources\maxresdefault2.jpg" />
     <None Include="Resources\maxresdefault1.jpg" />
     <None Include="Resources\maxresdefault.jpg" />

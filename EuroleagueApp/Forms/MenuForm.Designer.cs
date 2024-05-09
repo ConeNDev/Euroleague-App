@@ -36,6 +36,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.createPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editPlayerToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.createGaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +105,8 @@
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createPlayerToolStripMenuItem,
-            this.searchPlayerToolStripMenuItem});
+            this.searchPlayerToolStripMenuItem,
+            this.editPlayerToolStripMenuItem4});
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.OrangeRed;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -126,6 +128,16 @@
             this.searchPlayerToolStripMenuItem.Name = "searchPlayerToolStripMenuItem";
             this.searchPlayerToolStripMenuItem.Size = new System.Drawing.Size(226, 32);
             this.searchPlayerToolStripMenuItem.Text = "Search Player";
+            this.searchPlayerToolStripMenuItem.Click += new System.EventHandler(this.searchPlayerToolStripMenuItem_Click);
+            // 
+            // editPlayerToolStripMenuItem4
+            // 
+            this.editPlayerToolStripMenuItem4.Enabled = false;
+            this.editPlayerToolStripMenuItem4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.editPlayerToolStripMenuItem4.Name = "editPlayerToolStripMenuItem4";
+            this.editPlayerToolStripMenuItem4.Size = new System.Drawing.Size(226, 32);
+            this.editPlayerToolStripMenuItem4.Text = "Edit Player";
+            this.editPlayerToolStripMenuItem4.Click += new System.EventHandler(this.editPlayerToolStripMenuItem4_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -143,14 +155,14 @@
             // 
             this.createGaneToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.createGaneToolStripMenuItem.Name = "createGaneToolStripMenuItem";
-            this.createGaneToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.createGaneToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
             this.createGaneToolStripMenuItem.Text = "Create Game";
             // 
             // gameSearchToolStripMenuItem
             // 
             this.gameSearchToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.gameSearchToolStripMenuItem.Name = "gameSearchToolStripMenuItem";
-            this.gameSearchToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.gameSearchToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
             this.gameSearchToolStripMenuItem.Text = "Game Search";
             // 
             // pnlMenu
@@ -193,5 +205,6 @@
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         public System.Windows.Forms.ToolStripMenuItem editTeamToolStripMenuItem;
         private System.Windows.Forms.Panel pnlMenu;
+        public System.Windows.Forms.ToolStripMenuItem editPlayerToolStripMenuItem4;
     }
 }

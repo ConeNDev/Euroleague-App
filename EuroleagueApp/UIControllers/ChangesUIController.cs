@@ -13,10 +13,12 @@ namespace EuroleagueApp.UIControllers
 {
     public class ChangesUIController
     {
+        private Team selectedTeam;
         public MenuForm menuForm;
         public UCTeamEditData teamEditData;
         public UCTeamEditData MakeTeamEditWindow(Team selectedTeam)
         {
+            this.selectedTeam = selectedTeam;
             teamEditData = new UCTeamEditData();
             teamEditData.txtName.Text = selectedTeam.Name;
             teamEditData.txtArena.Text = selectedTeam.Arena;
@@ -27,6 +29,7 @@ namespace EuroleagueApp.UIControllers
             teamEditData.cmbCity.Items.Clear();
             teamEditData.cmbCity.Items.AddRange(cities.ToArray());
             teamEditData.cmbCity.DisplayMember = "Name";
+
 
             foreach (var city in cities)
             {
@@ -47,7 +50,7 @@ namespace EuroleagueApp.UIControllers
             {
                 Team teamToUpdate = new Team()
                 {
-
+                    TeamId = selectedTeam.TeamId,
                     Name = teamEditData.txtName.Text,
                     EuroleagueChampionsTitles = int.Parse(teamEditData
                     .txtEuroleagueTitles.Text),
@@ -56,22 +59,28 @@ namespace EuroleagueApp.UIControllers
                     City = (City)teamEditData.cmbCity.SelectedItem
 
                 };
-                if (string.IsNullOrWhiteSpace(teamToUpdate.Name)
-                   || !teamToUpdate.Name.All(char.IsLetter))
+                if (string.IsNullOrEmpty(teamToUpdate.Name)
+                   || !teamToUpdate.Name.All(c => char.IsLetter(c) || c == ' '))
                 {
                     MessageBox.Show("Invalid team name." +
                         " Please enter a valid name without numbers.");
                     return;
                 }
 
-                if (string.IsNullOrWhiteSpace(teamToUpdate.Coach)
-                    || !teamToUpdate.Coach.All(char.IsLetter))
+                if (string.IsNullOrEmpty(teamToUpdate.Coach)
+                    || !teamToUpdate.Coach.All(c => char.IsLetter(c) || c == ' '))
                 {
                     MessageBox.Show("Invalid coach name." +
                         " Please enter a valid name without numbers.");
                     return;
                 }
-                CommunicationHelper.Instance.UpdateTeam(teamToUpdate);
+                Team updatedTeam=CommunicationHelper.Instance.UpdateTeam(teamToUpdate);
+                teamEditData.txtName.Text = updatedTeam.Name;
+                teamEditData.txtEuroleagueTitles.Text = updatedTeam.EuroleagueChampionsTitles
+                    +"";
+                teamEditData.txtCoach.Text = updatedTeam.Coach;
+                teamEditData.txtArena.Text = updatedTeam.Arena;
+                //teamEditData.cmbCity.SelectedItem= updatedTeam.City.Name;
             }
             catch (Exception ex)
             {

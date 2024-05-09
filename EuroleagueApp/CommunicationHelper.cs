@@ -201,9 +201,41 @@ namespace EuroleagueApp
             return FilterdTeams;
 		}
 
-        public void UpdateTeam(Team teamToUpdate)
+        public Team UpdateTeam(Team teamToUpdate)
         {
-            
+            try
+            {
+                if (!clientConnected)
+                    throw new Exception("Not connected to server.");
+
+                Request request = MakeRequest(teamToUpdate, Operation.UpdateTeam);
+                sender.Send(request);
+
+                Response response = (Response)receiver.Receive();
+                teamToUpdate = response.GetDataFromResponse<Team>();
+
+                MessageBox.Show(response.Message);
+
+                return teamToUpdate;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public List<Player> GetAllPlayers()
+        {
+            if (!clientConnected)
+                throw new Exception("Not connected to server.");
+
+            Request request = MakeRequest("", Operation.GetAllPlayers);
+            sender.Send(request);
+
+            Response response = (Response)receiver.Receive();
+            List<Player> players = response.GetDataFromResponse<List<Player>>();
+            return players;
         }
     }
 }

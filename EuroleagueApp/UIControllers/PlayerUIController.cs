@@ -1,5 +1,6 @@
 ﻿using Entity;
 using Entity.Models;
+using EuroleagueApp.Forms;
 using EuroleagueApp.UserControls.UCPlayers;
 using EuroleagueApp.UserControls.UCTeams;
 using System;
@@ -14,6 +15,8 @@ namespace EuroleagueApp.UIControllers
 	public class PlayerUIController
 	{
 		private UCPlayerCreate playerCreate;
+        private UCPlayerSearch playerSearch;
+        private MenuForm menuForm;
         Player player;
 
 		public UCPlayerCreate MakeCreatePlayerWindow()
@@ -26,7 +29,32 @@ namespace EuroleagueApp.UIControllers
 
 		}
 
-        
+        public UCPlayerSearch MakeSearchPlayerWindow(MenuForm menuForm)
+        {
+            this.menuForm = menuForm;
+            playerSearch = new UCPlayerSearch();
+            List<Player> playerList = CommunicationHelper.Instance.GetAllPlayers();
+            playerSearch.dgvPlayers.DataSource = playerList;
+            playerSearch.txtBoxSearch.TextChanged += PlayerSearch;
+            playerSearch.dgvPlayers.RowHeaderMouseClick += AllowEditTeam;
+            playerSearch.dgvPlayers.CellMouseClick += NotAllowEditTeam;
+            return playerSearch;
+        }
+
+        private void NotAllowEditTeam(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AllowEditTeam(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PlayerSearch(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         private void BtnCreate(object sender, EventArgs e)
         {

@@ -17,7 +17,7 @@ namespace Common.Communication
         GetAllTeams,
         GetSelectedTeam,
 		SearchTeam,
-
-        
+        UpdateTeam,
+        GetAllPlayers,
     }
 }

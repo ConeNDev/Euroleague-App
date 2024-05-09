@@ -47,6 +47,10 @@ namespace ServerEuroleague
                         return response = CreatePlayer((Player)request.Body);
                     case Operation.GetSelectedTeam:
                         return response = GetSelectedTeam((Team)request.Body);
+                    case Operation.UpdateTeam:
+                        return response = UpdateTeam((Team)request.Body);
+                    case Operation.GetAllPlayers:
+                        return response = GetAllPlayers();
                 }
 
             }
@@ -58,6 +62,15 @@ namespace ServerEuroleague
         }
 
         
+
+        private Response UpdateTeam(Team team)
+        {
+            UpdateTeamSystemOperation updateTeamSO = new UpdateTeamSystemOperation();
+            updateTeamSO.Team = team;
+            updateTeamSO.Execute();
+            return new Response(updateTeamSO.Team, Operation.UpdateTeam, "Successfully updated" +
+                "team");
+        }
 
         private Response CreatePlayer(Player player)
         {
@@ -90,7 +103,7 @@ namespace ServerEuroleague
             getSelectedTeamSO.selectedTeam = selectedTeam;
             getSelectedTeamSO.Execute();
             return new Response(getSelectedTeamSO.selectedTeam, Operation.GetSelectedTeam,
-                "Successfully selected team");
+                "Successfully selected team, now you can edit him");
         }
         private Response GetAllTeams()
 		{
@@ -99,8 +112,14 @@ namespace ServerEuroleague
             return new Response(getAllSo.TeamList,Operation.GetAllTeams,
 				"Successfully withdrawn teams from the base");
 		}
-
-		private Response FillComboBox()
+        private Response GetAllPlayers()
+        {
+            GetAllPlayerSystemOperation getAllSo = new GetAllPlayerSystemOperation();
+            getAllSo.Execute();
+            return new Response(getAllSo.PlayerList, Operation.GetAllPlayers,
+                "Successfully withdrawn players from the base");
+        }
+        private Response FillComboBox()
 		{
             FillCmbCitiesSystemOperation fillCmbBoxSo = new FillCmbCitiesSystemOperation();
             fillCmbBoxSo.Execute();

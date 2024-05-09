@@ -58,16 +58,16 @@ namespace EuroleagueApp.UIControllers
 					City = (City)teamCreate.cmbCity.SelectedItem
 					
 				};
-                if (string.IsNullOrWhiteSpace(team.Name) 
-					|| !team.Name.All(char.IsLetter))
+                if (string.IsNullOrEmpty(team.Name) 
+					|| !team.Name.All(c => char.IsLetter(c) || c == ' '))
                 {
                     MessageBox.Show("Invalid team name." +
 						" Please enter a valid name without numbers.");
                     return; 
                 }
 
-                if (string.IsNullOrWhiteSpace(team.Coach) 
-					|| !team.Coach.All(char.IsLetter))
+                if (string.IsNullOrEmpty(team.Coach) 
+					|| !team.Coach.All(c => char.IsLetter(c) || c == ' '))
                 {
                     MessageBox.Show("Invalid coach name." +
 						" Please enter a valid name without numbers.");

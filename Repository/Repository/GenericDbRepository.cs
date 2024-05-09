@@ -106,7 +106,19 @@ namespace Repository.Repository
 
         public void Update(IEntity entity, string criteria)
         {
-            throw new NotImplementedException();
+            string query = $"update {entity.TableName}" +
+                $" set {entity.UpdateValues}" +
+                $" where {criteria}";
+
+            SqlCommand cmd = DbConnectionFactory.Instance.getConnection().CreateCommand(query);
+            foreach (var parameter in entity.Parameters)
+            {
+                cmd.Parameters.Add(parameter);
+            }
+            Debug.WriteLine("Generated SQL command: " + query);
+            int x = cmd.ExecuteNonQuery();
+
+            Console.WriteLine("Affected rows update: " + x);
         }
     }
 }

@@ -46,10 +46,12 @@
     <Compile Include="SystemOperations\CreatePlayerSystemOperation.cs" />
     <Compile Include="SystemOperations\CreateTeamSystemOperation.cs" />
     <Compile Include="SystemOperations\FillCmbCitiesSystemOperation.cs" />
+    <Compile Include="SystemOperations\GetAllPlayerSystemOperation.cs" />
     <Compile Include="SystemOperations\GetAllTeamSystemOperation.cs" />
     <Compile Include="SystemOperations\GetSelectedTeamSystemOperation.cs" />
     <Compile Include="SystemOperations\LoginUserSystemOperation.cs" />
     <Compile Include="SystemOperations\SearchTeamSystemOperation.cs" />
+    <Compile Include="SystemOperations\UpdateTeamSystemOperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">
